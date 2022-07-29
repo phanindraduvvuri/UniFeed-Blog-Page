@@ -23,7 +23,8 @@ body {
 }
 
 main,
-nav {
+nav,
+footer {
   max-width: 90vw;
   margin: 0 auto;
 }
@@ -33,6 +34,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -84,7 +89,9 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background-color: white;
   transition: all 0.3s ease-out;
+  z-index: 0;
 }
 
 .nav-link {
@@ -121,7 +128,7 @@ nav {
     top: -300px;
     gap: 1.5rem;
     flex-direction: column;
-    /* background-color: cornflowerblue; */
+    padding: 2rem 0;
   }
 
   .btn {
@@ -134,5 +141,89 @@ nav {
 
   .hamburger-icon {
     display: flex;
+  }
+}
+
+/* Articles Section */
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.article-content {
+  margin-top: 2rem;
+}
+
+.article-header {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.article-text {
+  font-size: 1.8rem;
+  color: var(--navlink-color);
+  margin-bottom: 1rem;
+}
+
+.article-author {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+}
+
+.author-image img {
+  width: 100%;
+  object-fit: contain;
+  margin: auto;
+}
+
+.article-img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.author-name {
+  font-weight: 500;
+}
+
+.author-position {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--navlink-color);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.copyright {
+  font-weight: 400;
+  color: var(--navlink-color);
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 650px) {
+  .article-main {
+    grid-column: 1 / -1;
+  }
+
+  .footer {
+    flex-direction: row;
   }
 }
